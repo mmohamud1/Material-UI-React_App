@@ -6,10 +6,10 @@ import Button from '@material-ui/core/Button'
 const App = () =>  {
   return (
     <div className="App">
-      <Button>
+      <header className="App-header">
+      <Button size="large" style={{ fontSize: 30 }} variant="contained" color="secondary">
         Hello World
       </Button>
-      <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
     </div>
