@@ -16,7 +16,7 @@ const CheckboxExample = () => {
 
   return (
     <div>
-      <FormControlLabel control={<Checkbox checked={checked} onChange={(e) => setChecked(e.target.checked)} inputProps={{ 'aria-label' : 'secondary checkbox' }} />} label="Checkbox 1" /> 
+      <FormControlLabel control={<Checkbox checked={checked} onChange={(e) => setChecked(e.target.checked)} inputProps={{ 'aria-label' : 'primary checkbox' }} />} label="Checkbox 1" /> 
       <FormControlLabel control={<Checkbox checked2={checked2} onChange={(e) => setChecked2(e.target.checked2)} inputProps={{ 'aria-label' : 'secondary checkbox' }} />} label="Checkbox 2" />  
     </div>
   )
@@ -26,9 +26,9 @@ const App = () =>  {
   return (
     <div className="App">
       <header className="App-header">
-        <TextField label="Enter Name" type="name" variant="outlined" color="secondary" style={{ paddingBottom : "40px"}}/>
+        <TextField label="Enter Name" type="name" variant="outlined" color="secondary" style={{ paddingBottom : "40px"}} />
         <CheckboxExample />
-      <ButtonGroup >
+      <ButtonGroup style={{ paddingBottom : "40px"}} >
         <Button startIcon={<SaveIcon/>} size="large" variant="contained" color="primary">
           Save
         </Button>
