@@ -10,7 +10,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
-//
+// Change styles of components
 const useStyles = makeStyles({
   root: {
     background: 'linear-gradient(45deg, #fe6b8b, #ff8e53)',
@@ -22,14 +22,16 @@ const useStyles = makeStyles({
   }
 })
 
+// Change Material UI themem
 const theme = createMuiTheme()
 
+// Apply style created above to button
 const ButtonStyled = () => {
   const classes = useStyles();
   return <Button className={classes.root}>Test Styled Btn</Button>
 }
 
-
+// Function to create checkbox
 const CheckboxExample = () => {
   const [checked, setChecked] = useState(false)
   const [checked2, setChecked2] = useState(false)
