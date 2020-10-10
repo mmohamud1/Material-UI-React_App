@@ -8,6 +8,23 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import TextField from '@material-ui/core/TextField';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  root: {
+    background: 'linear-gradient(45deg, #66efcd, #ef66cd)',
+    border: 0,
+    borderRadius: '15px',
+    color: '#fff',
+    padding: '2px 30px',
+    marginBottom: '20px'
+  }
+})
+
+const ButtonStyled = () => {
+  const classes = useStyles();
+  return <Button className={classes.root}>Test Styled Btn</Button>
+}
 
 
 const CheckboxExample = () => {
@@ -26,7 +43,11 @@ const App = () =>  {
   return (
     <div className="App">
       <header className="App-header">
-        <TextField label="Enter Name" type="name" variant="outlined" color="secondary" style={{ paddingBottom : "40px"}} />
+        <ButtonStyled />
+        <div className="textboxes">
+          <TextField label="Enter Name" type="name" variant="outlined" color="secondary" style={{ marginRight: "40px"}} />
+          <TextField label="Enter Email" type="email" variant="outlined" color="primary"  />
+        </div>
         <CheckboxExample />
       <ButtonGroup style={{ paddingBottom : "40px"}} >
         <Button startIcon={<SaveIcon/>} size="large" variant="contained" color="primary">
