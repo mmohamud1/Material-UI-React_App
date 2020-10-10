@@ -9,6 +9,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { blue, orange } from '@material-ui/core/colors';
 
 // Change styles of components
 const useStyles = makeStyles({
@@ -22,8 +23,17 @@ const useStyles = makeStyles({
   }
 })
 
-// Change Material UI themem
-const theme = createMuiTheme()
+// Change Material UI theme and change color pallete for primary and secondary colors
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: blue[600],
+    },
+    secondary: {
+      main: orange[400],
+    }
+  }
+})
 
 // Apply style created above to button
 const ButtonStyled = () => {
@@ -46,7 +56,7 @@ const CheckboxExample = () => {
 
 const App = () =>  {
   return (
-    <ThemeProvider >
+    <ThemeProvider theme={theme}>
       <div className="App">
         <header className="App-header">
           <ButtonStyled />
