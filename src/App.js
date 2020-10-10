@@ -8,11 +8,12 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import TextField from '@material-ui/core/TextField';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
+//
 const useStyles = makeStyles({
   root: {
-    background: 'linear-gradient(45deg, #66efcd, #ef66cd)',
+    background: 'linear-gradient(45deg, #fe6b8b, #ff8e53)',
     border: 0,
     borderRadius: '15px',
     color: '#fff',
@@ -20,6 +21,8 @@ const useStyles = makeStyles({
     marginBottom: '20px'
   }
 })
+
+const theme = createMuiTheme()
 
 const ButtonStyled = () => {
   const classes = useStyles();
@@ -41,26 +44,29 @@ const CheckboxExample = () => {
 
 const App = () =>  {
   return (
-    <div className="App">
-      <header className="App-header">
-        <ButtonStyled />
-        <div className="textboxes">
-          <TextField label="Enter Name" type="name" variant="outlined" color="secondary" style={{ marginRight: "40px"}} />
-          <TextField label="Enter Email" type="email" variant="outlined" color="primary"  />
-        </div>
-        <CheckboxExample />
-      <ButtonGroup style={{ paddingBottom : "40px"}} >
-        <Button startIcon={<SaveIcon/>} size="large" variant="contained" color="primary">
-          Save
-        </Button>
-        <Button startIcon={<DeleteIcon/>} size="large" variant="contained" color="secondary">
-          Delete
-        </Button>
-      </ButtonGroup>
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-    </div>
+    <ThemeProvider >
+      <div className="App">
+        <header className="App-header">
+          <ButtonStyled />
+          <div className="textboxes">
+            <TextField label="Enter Name" type="name" variant="outlined" color="secondary" style={{ marginRight: "40px"}} />
+            <TextField label="Enter Email" type="email" variant="outlined" color="primary"  />
+          </div>
+          <CheckboxExample />
+        <ButtonGroup style={{ paddingBottom : "40px"}} >
+          <Button startIcon={<SaveIcon/>} size="large" variant="contained" color="primary">
+            Save
+          </Button>
+          <Button startIcon={<DeleteIcon/>} size="large" variant="contained" color="secondary">
+            Delete
+          </Button>
+        </ButtonGroup>
+          <img src={logo} className="App-logo" alt="logo" />
+        </header>
+      </div>
+    </ThemeProvider>
   );
 }
 
 export default App;
+ 
