@@ -27,7 +27,7 @@ const useStyles = makeStyles({
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: blue[600],
+      main: blue[900],
     },
     secondary: {
       main: orange[400],
@@ -65,11 +65,11 @@ const App = () =>  {
             <TextField label="Enter Email" type="email" variant="outlined" color="primary"  />
           </div>
           <CheckboxExample />
-        <ButtonGroup style={{ paddingBottom : "40px"}} >
-          <Button startIcon={<SaveIcon/>} size="large" variant="contained" color="primary">
+        <ButtonGroup style={{ paddingBottom : "40px" }} >
+          <Button startIcon={<SaveIcon/>}  variant="contained" color="primary">
             Save
           </Button>
-          <Button startIcon={<DeleteIcon/>} size="large" variant="contained" color="secondary">
+          <Button startIcon={<DeleteIcon/>}  variant="contained" color="secondary">
             Delete
           </Button>
         </ButtonGroup>
