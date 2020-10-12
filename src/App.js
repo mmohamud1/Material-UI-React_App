@@ -25,8 +25,16 @@ const useStyles = makeStyles({
   }
 })
 
-// Change Material UI theme and change color pallete for primary and secondary colors
+// Change Material UI theme (change defualt material ui settings e.g color and typography)
 const theme = createMuiTheme({
+  typography: {
+    h2: {
+      fontSize: '48px',
+    },
+    subtitle1: {
+      marginBottom: '40px'
+    }
+  },
   palette: {
     primary: {
       main: blue[900],
@@ -61,10 +69,10 @@ const App = () =>  {
     <ThemeProvider theme={theme}>
       <div className="App">
         <header className="App-header">
-          <Typography variant="h2">
+          <Typography variant="h2" component="div">
             Welcome To Material UI
           </Typography>
-          <Typography variant="subtitle1" style={{ marginBottom: "40px"}}>
+          <Typography variant="subtitle1" >
             Learn How To Use Material UI
           </Typography>
           <ButtonStyled />
