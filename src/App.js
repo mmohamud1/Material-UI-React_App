@@ -11,6 +11,7 @@ import TextField from '@material-ui/core/TextField';
 import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { blue, orange } from '@material-ui/core/colors';
 import 'fontsource-roboto';
+import Typography from '@material-ui/core/Typography'
 
 // Change styles of components
 const useStyles = makeStyles({
@@ -60,6 +61,9 @@ const App = () =>  {
     <ThemeProvider theme={theme}>
       <div className="App">
         <header className="App-header">
+          <Typography>
+            Welcome To Material Ui
+          </Typography>
           <ButtonStyled />
           <div className="textboxes">
             <TextField label="Enter Name" type="name" variant="outlined" color="secondary" style={{ marginRight: "40px"}} />
