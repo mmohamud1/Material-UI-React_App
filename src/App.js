@@ -61,8 +61,11 @@ const App = () =>  {
     <ThemeProvider theme={theme}>
       <div className="App">
         <header className="App-header">
-          <Typography>
-            Welcome To Material Ui
+          <Typography variant="h2">
+            Welcome To Material UI
+          </Typography>
+          <Typography variant="subtitle1" style={{ marginBottom: "40px"}}>
+            Learn How To Use Material UI
           </Typography>
           <ButtonStyled />
           <div className="textboxes">
@@ -70,7 +73,7 @@ const App = () =>  {
             <TextField label="Enter Email" type="email" variant="outlined" color="primary"  />
           </div>
           <CheckboxExample />
-        <ButtonGroup style={{ paddingBottom : "40px" }} >
+        <ButtonGroup style={{ marginBottom : "30px" }} >
           <Button startIcon={<SaveIcon/>}  variant="contained" color="primary">
             Save
           </Button>
