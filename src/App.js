@@ -10,6 +10,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { blue, orange } from '@material-ui/core/colors';
+import 'fontsource-roboto';
 
 // Change styles of components
 const useStyles = makeStyles({
