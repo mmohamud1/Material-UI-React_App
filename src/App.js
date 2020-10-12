@@ -11,7 +11,7 @@ import TextField from '@material-ui/core/TextField';
 import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { blue, orange } from '@material-ui/core/colors';
 import 'fontsource-roboto';
-import Typography from '@material-ui/core/Typography'
+import Typography from '@material-ui/core/Typography';
 
 // Change styles of components
 const useStyles = makeStyles({
