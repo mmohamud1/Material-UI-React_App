@@ -12,6 +12,12 @@ import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/sty
 import { blue, orange } from '@material-ui/core/colors';
 import 'fontsource-roboto';
 import Typography from '@material-ui/core/Typography';
+import Paper from '@material-ui/core/Paper'
+import Grid from '@material-ui/core/Grid'
+import AppBar from '@material-ui/core/AppBar'
+import ToolBar from '@material-ui/core/Toolbar'
+import IconButton from '@material-ui/core/IconButton'
+import MenuIcon from '@material-ui/icons/Menu'
 
 // Change styles of components
 const useStyles = makeStyles({
@@ -32,7 +38,7 @@ const theme = createMuiTheme({
       fontSize: '48px',
     },
     subtitle1: {
-      marginBottom: '40px'
+      marginBottom: '20px'
     }
   },
   palette: {
@@ -67,31 +73,55 @@ const CheckboxExample = () => {
 const App = () =>  {
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
-        <header className="App-header">
-          <Typography variant="h2" component="div">
-            Welcome To Material UI
-          </Typography>
-          <Typography variant="subtitle1" >
-            Learn How To Use Material UI
-          </Typography>
-          <ButtonStyled />
-          <div className="textboxes">
-            <TextField label="Enter Name" type="name" variant="outlined" color="secondary" style={{ marginRight: "40px"}} />
-            <TextField label="Enter Email" type="email" variant="outlined" color="primary"  />
-          </div>
-          <CheckboxExample />
-        <ButtonGroup style={{ marginBottom : "30px" }} >
-          <Button startIcon={<SaveIcon/>}  variant="contained" color="primary">
-            Save
-          </Button>
-          <Button startIcon={<DeleteIcon/>}  variant="contained" color="secondary">
-            Delete
-          </Button>
-        </ButtonGroup>
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
-      </div>
+        <div className="App">
+          <header className="App-header">
+            <AppBar>
+              <ToolBar>
+                <IconButton>
+                  <MenuIcon></MenuIcon>
+                </IconButton>
+                <Typography variant="h6" >
+                  MUI Themeing
+                </Typography>
+                <Button>
+                  Login
+                </Button>
+              </ToolBar> 
+            </AppBar>
+            <Typography variant="h2" component="div">
+              Welcome To Material UI
+            </Typography>
+            <Typography variant="subtitle1" >
+              Learn How To Use Material UI
+            </Typography>
+            <ButtonStyled />
+            <Grid container spacing={2} justify="center">
+              <Grid item>
+                <Paper style={{ height: '75px', width : '50px', marginBottom: '20px'}}/>
+              </Grid>
+              <Grid item>
+                <Paper style={{ height: '75px', width : '50px', marginBottom: '20px'}}/>
+              </Grid><Grid item>
+                <Paper style={{ height: '75px', width : '50px', marginBottom: '20px'}}/>
+              </Grid>
+            </Grid>
+            <div className="textboxes">
+              <TextField label="Enter Name" type="name" variant="outlined" color="secondary" style={{ marginRight: "40px"}} />
+              <TextField label="Enter Email" type="email" variant="outlined" color="primary"  />
+            </div>
+            <CheckboxExample />
+          <ButtonGroup style={{ marginBottom : "10px" }} >
+            <Button startIcon={<SaveIcon/>}  variant="contained" color="primary">
+              Save
+            </Button>
+            <Button startIcon={<DeleteIcon/>}  variant="contained" color="secondary">
+              Delete
+            </Button>
+          </ButtonGroup>
+            <img src={logo} className="App-logo" alt="logo" />
+          </header>
+        </div>
+
     </ThemeProvider>
   );
 }
